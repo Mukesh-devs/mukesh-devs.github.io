@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- Mukesh Devs: an M on a dark tile, in the colours of DataLiq's icon. -->
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#272b3a"/>
+      <stop offset="1" stop-color="#0f1117"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.26"/>
+      <stop offset="0.35" stop-color="#ffffff" stop-opacity="0.03"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="brand" gradientUnits="userSpaceOnUse" x1="250" y1="270" x2="774" y2="754">
+      <stop offset="0" stop-color="#67e8f9"/>
+      <stop offset="0.55" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+  <rect x="28" y="28" width="968" height="968" rx="217" fill="url(#tile)"/>
+  <rect x="29.5" y="29.5" width="965" height="965" rx="215.5" fill="none" stroke="url(#edge)" stroke-width="3"/>
+  <path d="M 298 724 V 300 L 512 566 L 726 300 V 724" fill="none" stroke="url(#brand)" stroke-width="118" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

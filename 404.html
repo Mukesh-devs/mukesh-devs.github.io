@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page not found - Mukesh Devs</title>
+    <meta name="robots" content="noindex" />
+    <!-- GitHub Pages serves this page at any address, so every path is absolute. -->
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <style>
+      @font-face {
+        font-family: "Geist";
+        src: url("/assets/fonts/geist-latin.woff2") format("woff2-variations");
+        font-weight: 100 900;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "JetBrains Mono";
+        src: url("/assets/fonts/jetbrains-mono-latin.woff2") format("woff2-variations");
+        font-weight: 100 800;
+        font-display: swap;
+      }
+      :root {
+        color-scheme: light dark;
+        --page: #f6f7f9;
+        --panel: #ffffff;
+        --ink: #0b1020;
+        --muted: #5b6475;
+        --line: #dde1e8;
+        --dot: rgb(79 70 229 / 0.16);
+        --accent: #4f46e5;
+        --accent-ink: #ffffff;
+        --term: #0f1220;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --page: #090c13;
+          --panel: #10141e;
+          --ink: #e9edf5;
+          --muted: #98a0b0;
+          --line: #222938;
+          --dot: rgb(129 140 248 / 0.16);
+          --accent: #818cf8;
+          --accent-ink: #090c13;
+          --term: #0b0e18;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px 16px;
+        background:
+          radial-gradient(var(--dot) 1.1px, transparent 1.6px) 0 0 / 22px 22px,
+          var(--page);
+        color: var(--ink);
+        font:
+          17px/1.6 "Geist",
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      main {
+        width: 100%;
+        max-width: 560px;
+        text-align: center;
+      }
+      main > img {
+        margin: 0 auto;
+      }
+      pre {
+        margin: 26px 0 0;
+        padding: 16px 18px;
+        border-radius: 14px;
+        background: var(--term);
+        color: #d7dcea;
+        font:
+          13.5px/1.75 "JetBrains Mono",
+          ui-monospace,
+          monospace;
+        text-align: left;
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+      }
+      pre b {
+        color: #67e8f9;
+      }
+      pre i {
+        color: #fca5a5;
+        font-style: normal;
+      }
+      h1 {
+        margin: 26px 0 8px;
+        font-weight: 650;
+        font-size: clamp(34px, 7vw, 56px);
+        line-height: 1.02;
+        letter-spacing: -0.05em;
+      }
+      p {
+        margin: 0;
+        color: var(--muted);
+      }
+      ul {
+        display: grid;
+        gap: 10px;
+        margin: 28px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+      ul a {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 12px 16px;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: var(--panel);
+        color: var(--ink);
+        text-align: left;
+        text-decoration: none;
+        transition: border-color 0.2s;
+      }
+      ul a:hover {
+        border-color: var(--accent);
+      }
+      ul a span {
+        display: grid;
+        line-height: 1.35;
+      }
+      ul a b {
+        font-weight: 600;
+      }
+      ul a small {
+        color: var(--muted);
+        font-size: 14px;
+      }
+      ul a.home {
+        border-color: var(--accent);
+        background: var(--accent);
+        color: var(--accent-ink);
+      }
+      ul a.home small {
+        color: inherit;
+        opacity: 0.8;
+      }
+      a:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <img src="/icon.svg" width="72" height="72" alt="" />
+      <pre><b>~ $</b> cd <span data-path>this-page</span>
+<i>cd: no such file or directory</i></pre>
+      <h1>This page isn’t here.</h1>
+      <p>The address may be mistyped, or the link may be old. Try one of these:</p>
+      <ul>
+        <li>
+          <a class="home" href="/">
+            <img src="/icon.svg" width="36" height="36" alt="" />
+            <span><b>Mukesh Devs</b><small>The home page</small></span>
+          </a>
+        </li>
+        <li>
+          <a href="/dataliq/">
+            <img src="/assets/projects/dataliq.svg" width="36" height="36" alt="" />
+            <span><b>DataLiq</b><small>Open huge data files in seconds</small></span>
+          </a>
+        </li>
+        <li>
+          <a href="/squick-share/">
+            <img src="/assets/projects/squick-share.svg" width="36" height="36" alt="" />
+            <span><b>SQuick Share</b><small>Quick Share for your Mac</small></span>
+          </a>
+        </li>
+      </ul>
+    </main>
+    <script>
+      // Show the address that was asked for (as text, never as markup).
+      (function () {
+        var path = decodeURIComponent(location.pathname).replace(/^\/+/, "");
+        if (path.length > 60) path = path.slice(0, 57) + "…";
+        if (path) document.querySelector("[data-path]").textContent = path;
+      })();
+    </script>
+  </body>
+</html>

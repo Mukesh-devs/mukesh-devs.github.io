@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mukesh-devs.github.io/sitemap.xml
+Sitemap: https://mukesh-devs.github.io/dataliq/sitemap.xml
+Sitemap: https://mukesh-devs.github.io/squick-share/sitemap.xml

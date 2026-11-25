@@ -1,0 +1,47 @@
+name: Website
+
+# Publishes the home page to GitHub Pages (https://mukesh-devs.github.io/).
+# The site is static files, so there is no build: the site's files are copied
+# into _site as they are and uploaded. DataLiq (/dataliq/) and SQuick Share
+# (/squick-share/) are published from their own repositories.
+#
+# One-time setup: Settings › Pages › Build and deployment › Source: "GitHub Actions".
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deployment at a time; a newer one waits for the one in progress.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Collect the site's files
+        run: |
+          mkdir _site
+          cp -R index.html 404.html favicon.ico icon.svg favicon-48.png favicon-96.png \
+            apple-touch-icon.png og.png robots.txt sitemap.xml css js assets _site/
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
